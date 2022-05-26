@@ -1,0 +1,42 @@
+﻿@model _1semana.Models.Moneda;
+
+@{
+    ViewData["Title"] = "Conversion de monedas";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Calculadora</h1>
+
+<form  asp-controller="Moneda" asp-action="Calcular"> 
+
+    <label>Conversor de moneda</label>
+    <br>
+     <label>Elige la moneda</label>
+    <select asp-for="Accion">
+      <option value="Peso">Peso</option>
+      <option value="Dolar">Dolar</option>
+      <option value="Euro">Euro</option>
+    </select>
+    <br>
+    <label>Operador1</label>
+    <input asp-for="Operador1">
+    <br>
+    <label>Elige la moneda a convertir</label>
+    <select asp-for="Accion2">
+      <option value="Peso">Peso</option>
+      <option value="Dolar">Dolar</option>
+      <option value="Euro">Euro</option>
+    </select>
+    <br>
+    <input type="submit" value="Calcular">
+
+</form>
+
+
+<td>@Html.DisplayNameFor(model => model.Respuesta)</td>
+<td>@Html.DisplayTextFor(model => model.Respuesta)</td>
+
+<td>@Html.DisplayTextFor(model => model.fake)</td>
+
+
+</div>
